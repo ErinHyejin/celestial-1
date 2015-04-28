@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150417192041) do
+ActiveRecord::Schema.define(version: 20150420174949) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,10 +22,11 @@ ActiveRecord::Schema.define(version: 20150417192041) do
     t.decimal  "mass"
     t.string   "fall"
     t.integer  "year"
-    t.string   "reclat"
-    t.string   "reclong"
+    t.decimal  "reclat"
+    t.decimal  "reclong"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "decade"
   end
 
 end

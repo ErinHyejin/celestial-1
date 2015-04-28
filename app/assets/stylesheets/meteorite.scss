@@ -37,6 +37,8 @@ body {
   line-height: 1.4;
 }
 
+
+
 /*
  * Remove text-shadow in selection highlight: h5bp.com/i
  * These selection rule sets have to be separate.
@@ -120,8 +122,11 @@ body {
   padding-top: 106px;
 }
 
-h2 {
-  margin-top: 0;
+h2, h4 {
+  margin: 0 auto;
+  color: white;
+  padding: 10px;
+  text-align: center;
 }
 
 .loading {
@@ -180,7 +185,7 @@ main {
   color: #fff8de;
   background-color: rgba(0, 0, 0, 0.5);
   padding: 10px 5px;
-  font-size: 35px;
+  font-size: 40px;
   line-height: 38px;
   margin-bottom: 12px;
 }
@@ -195,53 +200,62 @@ main {
   text-decoration: underline;
 }
 
-/* Slide 1 */
-#slide-1 .bcg {
+/* Slide-main */
+#slide-main .bcg {
   background-image: url('openingpicture.jpg')
 }
 
-#slide-1 .hsContent {
+#slide-main .hsContent {
   top: auto;
 }
 
-/* Slide 2 */
-#slide-2 .bcg {
+/* Slide-metes */
+#slide-metes .bcg {
   background-image: url('bcg_slide-2.jpg')
 }
 
-#slide-2 .hsContent {
-  margin-left: -450px;
-  bottom: 200px;
-  top: auto;
-}
-
-/* Slide 3 */
-#slide-3 .bcg {
+/* Slide-webgl */
+#slide-webgl .bcg {
   background-image: url('bcg_slide-3.jpg')
 }
 
-#slide-3 .hsContent {
+#slide-webgl .hsContent {
   margin-left: -239px;
 }
 
-#slide-3 h2 {
-  color: #f2ead6;
+#slide-webgl h2 {
+  color: #ffffff;
   background-color: rgba(0, 0, 0, 0.6);
 }
 
-/* Slide 4 */
-#slide-4 .bcg {
-  background-image: url('main.jpg')
+/* Slide-chart */
+#slide-chart .bcg {
+  background-image: url('bcg_slide-3.jpg')
 }
 
-#slide-4 .hsContent {
+#slide-chart .bcg-chart {
+  background: #333739;
+}
+
+#slide-chart .hsContent {
   margin-left: -450px;
 }
 
-#slide-4 h2 {
+#slide-chart h2 {
   background: none;
   padding-left: 0;
   padding-right: 0;
+}
+
+/* Slide-googlemap */
+
+/* Slide-final */
+#slide-final .bcg {
+  background-image: url('finalpic.jpg')
+}
+
+#slide-final .hsContent {
+  top: auto;
 }
 
 /* ==========================================================================

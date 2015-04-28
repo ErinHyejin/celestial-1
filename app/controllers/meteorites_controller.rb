@@ -8,15 +8,24 @@ class MeteoritesController < ApplicationController
     render json: meteorite
   end
 
+  def top_10
+    meteorites = Meteorite.order('mass DESC LIMIT 10')
+    render json: meteorites
+  end
+
+  def top_100
+    meteorites = Meteorite.order('mass DESC LIMIT 100')
+    render json: meteorites
+  end
+
   def by_year
     # consider limiting by year
-    year = 1800
     meteorites = {}
-    until year == 2014
-      meteorites[year] = []
-      meteorites[year] << Meteorite.where("year = #{year}").order('year').pluck(:mass, :reclat, :reclong)
-      meteorites[year].flatten!(1)
-     year += 1
+    data = Meteorite.where("year >= 1800").order('year')
+    data.each do |meteorite|
+      meteorites[meteorite[:year]] = [] unless meteorites.has_key?(meteorite[:year])
+
+      meteorites[meteorite[:year]] << [meteorite[:mass], meteorite[:reclat], meteorite[:reclong]]
     end
     render json: meteorites
   end
@@ -32,13 +41,33 @@ class MeteoritesController < ApplicationController
   end
 
   def group_by_year
-    meteorites = Meteorite.group(:year).count
-    meteorites.sort
+    meteorites = Meteorite.where("year >=1800").group(:year).count
+    render json: meteorites
+  end
+
+  def group_by_decade
+    meteorites = Meteorite.where("year >=1800").group(:decade).count
+    render json: meteorites
+  end
+
+  def hemispheres
+    count = Meteorite.count
+    count = count.to_f
+    northeast = Meteorite.hemisphere("northeast")
+    northeast = northeast / count
+    northwest = Meteorite.hemisphere("northwest")
+    northwest = northwest / count
+    southeast = Meteorite.hemisphere("southeast")
+    southeast = southeast / count
+    southwest = Meteorite.hemisphere("southwest")
+    southwest = southwest / count
+    meteorites = { "northeast" => northeast, "northwest" => northwest, "southeast" => southeast, "southwest" => southwest }
     render json: meteorites
   end
 
   def show
-    @meteorite = Meteorite.find(params[:id ])
+    meteorite = Meteorite.find(params[:id ])
+    render json: meteorite
   end
 
 end

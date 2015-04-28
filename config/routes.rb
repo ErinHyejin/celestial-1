@@ -11,6 +11,10 @@ Rails.application.routes.draw do
 
   get 'meteorites/biggest', to: 'meteorites#biggest'
 
+  get 'meteorites/top_10', to: 'meteorites#top_10'
+
+  get 'meteorites/top_100', to: 'meteorites#top_100'
+
   get 'meteorites/by_year', to: 'meteorites#by_year'
 
   get 'meteorites/by_name', to: 'meteorites#by_name'
@@ -18,6 +22,10 @@ Rails.application.routes.draw do
   get 'meteorites/group_by_material', to: 'meteorites#group_by_material'
 
   get 'meteorites/group_by_year', to: 'meteorites#group_by_year'
+
+    get 'meteorites/group_by_decade', to: 'meteorites#group_by_decade'
+
+  get 'meteorites/hemispheres', to: 'meteorites#hemispheres'
 
   resources :meteorites, only: [:index, :show]
   # Example of regular route:

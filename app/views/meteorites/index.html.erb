@@ -4,80 +4,61 @@
   <img src="assets/bcg_slide-2.jpg">
   <img src="assets/bcg_slide-3.jpg">
   <img src="assets/main.jpg">
+  <img src="assets/finalpic.jpg">
 </div>
 
 <main>
-
-  <section id="slide-1" class="homeSlide">
+  <section id="slide-main" class="homeSlide">
     <div class="bcg">
       <div class="hsContainer">
-
+        <a href="#slide-metes"><h1 class="celestial">Celestial</h1></a>
+        <h1 class="title">A Meteorite Discovery Portal</h1>
       </div>
     </div>
   </section>
 
-  <section id="slide-2" class="homeSlide">
+  <div id='cssmenu'>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href='#slide-metes'>Notable Meteorites</a></li>
+      <li><a href='#slide-webgl'>Globe</a></li>
+      <li><a href='#slide-chart'>Charts</a></li>
+      <li><a href='#slide-googlemap'>Impacts</a></li>
+    </ul>
+  </div>
+
+  <section id="slide-metes" class="homeSlide">
     <div class="bcg">
       <div class="hsContainer">
-        <!-- Google Maps -->
-        <div id="map-canvas"></div>
+        <%= render "interesting_meteorites" %>
       </div>
     </div>
   </section>
 
-  <section id="slide-3" class="homeSlide">
-    <div class="bcg">
+  <section id="slide-webgl" class="homeSlide">
       <div class="hsContainer">
-        <!-- WebGL -->
-        <div id="earth_div" style="width: 1000px;height: 700px;margin: 0 auto;padding: 0;border: 2px #FFFFFF;"></div>
+        <%= render "webgl" %>
       </div>
+  </section>
+
+  <section id="slide-chart" class="homeSlide">
+    <div class="hsContainer">
+      <%= render "charts"%>
     </div>
   </section>
 
-  <section id="slide-4" class="homeSlide">
-    <div class="bcg">
-      <div class="hsContainer">
-        <!-- Mapbox -->
-        <div id="current_location_map"></div>
-      </div>
+  <section id="slide-googlemap" class="homeSlide">
+    <div class="hsContainer">
+      <%= render "google_map" %>
     </div>
   </section>
 
-  <section id="slide-5" class="homeSlide">
+  <section id="slide-final" class="homeSlide">
     <div class="bcg">
-      <div class="hsContainer">
-
-      </div>
-
-    </div>
-  </section>
-
-  <section id="slide-6" class="homeSlide">
-    <div class="bcg">
-      <div class="hsContainer">
-
-      </div>
-
-    </div>
-  </section>
-
-  <section id="slide-7" class="homeSlide">
-    <div class="bcg">
-      <div class="hsContainer">
-
-      </div>
-
-    </div>
-  </section>
-
-  <section id="slide-8" class="homeSlide">
-    <div class="bcg">
-      <div class="hsContainer">
-
-      </div>
-
+        <div class="hsContainer">
+<!--           <p class="final_statement">Thank you</p> -->
+        </div>
     </div>
   </section>
 
 </main>
-

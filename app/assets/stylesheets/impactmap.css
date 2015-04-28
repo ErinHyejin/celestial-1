@@ -1,0 +1,62 @@
+/* Slide 5 */
+
+#map-canvas {
+    max-width: 80%;
+    height: 550px;
+    margin: 0 auto;
+    padding: 0;
+    border: 2px #FFFFFF;
+    border-radius: 210px;
+}
+
+
+#slide-googlemap .bcg {
+    background-image: url('bcg_slide-2.jpg')
+}
+
+#slide-googlemap .hsContent {
+    top: auto;
+}
+
+#slide-googlemap .hsContent {
+    margin-left: -450px;
+    bottom: 200px;
+    top: auto;
+}
+
+#slide-googlemap .year_slider {
+    margin: 0 auto;
+    width: 80%;
+// padding: 2px;
+}
+
+#slide-googlemap #year_indicator {
+    color: black;
+    background-color: white;
+    border: 1px white solid;
+    width: 100px;
+    display: block;
+    margin: 1% auto;
+    position: relative;
+    padding: 10px;
+    font-size: 30px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+#slide-googlemap .ui-slider-handle {
+    margin-top: 2px;
+}
+
+#slide-googlemap #min_year, #max_year {
+    color: #aaaaaa;
+    width: 40px;
+    position: absolute;
+    display: block;
+    padding: 10px;
+}
+
+#play_button {
+    position: absolute;
+    width: 40px;
+}
