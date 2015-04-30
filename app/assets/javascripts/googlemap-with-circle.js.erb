@@ -97,6 +97,7 @@ function clearCircles() {
     circles[i].setMap(null);
   }
   circles.length = 0;
+  console.log('circles are clearing')
 }
 
 function drawCircles(year) {
@@ -123,6 +124,7 @@ function drawCircles(year) {
           var meteoObj = new google.maps.Circle(meteoriteCircle)
 
           circles.push(meteoObj);
+          console.log('circles are drawn')
         }
     );
   }
