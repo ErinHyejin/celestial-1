@@ -183,14 +183,14 @@ $(function () {
   });
 
   function stopPlaying() {
-    $("#play_button").attr("src", "/assets/images/play.png");
+    $("#play_button").attr({src: "<%= asset_path('play.png')%>"});
     playing = false;
     clearInterval(play_interval);
     clearInterval(fadeout_interval);
   }
 
   function startPlaying() {
-    $("#play_button").attr("src", "/assets/images/stop.png");
+    $("#play_button").attr({src: "<%= asset_path('stop.png')%>"});
     playing = true;
     play_interval = setInterval(function () {
       moveTick();
