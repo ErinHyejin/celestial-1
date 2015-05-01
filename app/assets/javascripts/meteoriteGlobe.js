@@ -67,10 +67,10 @@ function initializeWebGL() {
   $('#rotate-button').on('click', function(e) {
     if (speedDivisor === 150) {
       speedDivisor = 100000000000000;
-      $('#rotate-button').attr("src", "/assets/play.png");
+      $('#rotate-button').attr({src: "<%= asset_path('play.png')%>"});
     } else {
       speedDivisor = 150;
-      $('#rotate-button').attr("src", "/assets/stop.png");
+      $('#rotate-button').attr({src: "<%= asset_path('stop.png')%>"});
     }
   });
 
